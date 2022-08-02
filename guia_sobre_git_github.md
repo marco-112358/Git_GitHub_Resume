@@ -26,13 +26,11 @@ Verifique se a instalação foi bem-sucedida e sua versão | $ git --version
 **_Agora, reconfigure utilizando novamente os (comandos 1 e 2)._**
 
 TAREFAS           | COMANDOS
----------------------- | ---------------------
-1. Configurar o seu nome para "commit" | $ git config --global user.name "seu nome aqui..."
-2. Configurar o endereço de e-mail para "commit" | $ git config --global user.email "sua conta aqui...@..."
-3. Deletar o user.name das configurações | $ git config --global --unset user.name
-4. Deletar o user.email das configurações | $ git config --global --unset user.email
-
-
+----------------- | ----------------------
+Configurar o seu nome para "commit" | $ git config --global user.name "seu nome aqui..."
+Configurar o endereço de e-mail para "commit" | $ git config --global user.email "sua conta aqui...@..."
+Deletar o user.name das configurações | $ git config --global --unset user.name
+Deletar o user.email das configurações | $ git config --global --unset user.email
 
 #### Criando um **Repositório Local (na sua máquina)**
 
