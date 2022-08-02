@@ -44,7 +44,33 @@ inicializar o Reposório para versionamento | $ git init
 Exibe o estado atual do seu Reposório de trabalho Git e área de preparação(Staging) | $ git status
 incluir atualizações a um arquivo específico ou todos (*) no próximo commit. No entanto, git add não tem efeito real e significativo no repositório — as alterações só terão efeito após executar git commit. | git add *
 Capturar o estado de um projeto naquele momento. O comando git commit captura um instantâneo das mudanças preparadas do projeto no momento. Os instantâneos com commit podem ser considerados versões "seguras" de um projeto, o Git nunca os altera, a menos que você peça a ele. Antes da execução de git commit, o comando git add é usado para promover ou "preparar" mudanças no projeto que são armazenadas em um commit. Estes dois comandos - git commit e git add - estão entre os mais usados. | $ git commit -m "Uma descrição deste commit. ex: Este é primeiro "release" deste projeto"
-aaaaa | aaaaa
+Enviar(push) Repositório LOCAL(Git) para Repositório REMOTO(GitHub) _Lembre-se: Primeiro, o Repositório REMOTO(GitHub) deverá estar criado._ | $ git push origin master
+
+___
+
+###### Caso ocorra problemas na autenticação/permissão (_Erro de permissão e erro 403 no Git push_), proceda da seguinte maneira:
+
+1. No Repositório REMOTO(GitHub), gerar um novo token.
+
+   Clicar no ícone do "usuário" no canto superior direito do GitHub:
+
+  > Settings -> Developer settings -> Personal access tokens -> Generate new token
+
+2. Habilitar as seguintes opções:
+
+  > repo; workflow; user; write:discussion; admin:entrerprise; admin:gpg_key (Clicar no botão "Generate token")
+
+3. Copiar o Token que foi gerado.
+
+4. No Repositório LOCAL(Git), remover o "remote origin"
+
+  > $ git remote remove origin
+
+5. No Repositório LOCAL(Git), reconfigurar o "remote origin"
+
+  > $ git remote add origin https://...token copiado...@github.com/...seu user name .../...seu repositorio remoto.git
+
+___
 
 ## O que é GitHub?
 [Guia de referência](https://blog.geekhunter.com.br/github-o-que-e-como-usar/)
@@ -60,7 +86,7 @@ Na plataforma, predominam trabalhos de softwares em geral, mas o GitHub vem pass
 _Cabe lembrar que é necessário ter uma conta no GitHub._
 [GitHub](https://github.com/)
 
-..... Completar.
+... Completar ...
 
 #### Enviar Repositório LOCAL(Git) para Repositório REMOTO(GitHub)
 
@@ -70,7 +96,6 @@ TAREFAS           | COMANDOS
 ---------------------- | ---------------------
 Associar Repositório LOCAL(Git) com o Repositório REMOTO(GitHub) | $ git remote add origin ...aqui, link do Repositório REMOTO(GitHub)
 Listar Repositórios Remotos cadastrados | $ git remote -v
-Enviar Repositório LOCAL(Git) para Repositório REMOTO(GitHub) | $ git push origin master
 
 #### Resolvendo conflitos de versionamentos entre repositótios (Local e Remoto)
 
